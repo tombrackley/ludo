@@ -10,8 +10,6 @@ import { PrimeVideo } from '@/components/ui/svgs/prime-video'
 import { Button } from '@/components/ui/button'
 import { TextEffect } from '@/components/ui/text-effect'
 
-import type { AnchorHTMLAttributes } from 'react'
-const Link = ({ href, children, ...props }: AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }) => <a href={href} {...props}>{children}</a>
 import { cn } from '@/lib/utils'
 import { BERNARD_AVATAR, GLODIE_AVATAR, MESCHAC_AVATAR } from '@/lib/const'
 
@@ -265,7 +263,7 @@ export function Testimonials() {
                 </div>
             </div>
 
-            <Button variant="link" className="mx-auto flex w-fit" render={<Link href="#" />} nativeButton={false}>Read more customer Stories <ChevronRight /></Button>
+            <Button variant="link" className="mx-auto flex w-fit"><a href="#">Read more customer Stories <ChevronRight className="inline" /></a></Button>
         </div>
     )
 }

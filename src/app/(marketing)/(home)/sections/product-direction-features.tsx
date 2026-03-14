@@ -28,8 +28,8 @@ export function ProductDirectionFeaturesSection() {
                     <h1 className="mt-4 text-balance text-4xl font-semibold md:text-5xl lg:text-6xl">Streamline Your Invoicing Process</h1>
                     <p className="text-muted-foreground mb-6 mt-4 text-balance text-lg">Simplify invoicing with automated and reporting tools. Empowering businesses with cutting-edge technology to streamline operations.</p>
 
-                    <Button render={<a href="#" />} nativeButton={false}>Get Started</Button>
-                    <Button variant="outline" className="ml-3" render={<a href="#" />} nativeButton={false}>Get a Demo</Button>
+                    <Button><a href="#">Get Started</a></Button>
+                    <Button variant="outline" className="ml-3"><a href="#">Get a Demo</a></Button>
 
                     <div className="border-border-illustration mt-20 grid gap-6 border-y py-6 text-left sm:grid-cols-2 md:grid-cols-3 lg:gap-12">
                         {features.map((feature, index) => (

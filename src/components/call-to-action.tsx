@@ -1,6 +1,4 @@
 import { Button } from '@/components/ui/button'
-import type { AnchorHTMLAttributes } from 'react'
-const Link = ({ href, children, ...props }: AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }) => <a href={href} {...props}>{children}</a>
 import { CtaIllustration } from '@/components/illustrations/cta-illustration'
 
 export function CallToAction() {
@@ -15,7 +13,7 @@ export function CallToAction() {
                         <h2 className="text-balance text-4xl font-semibold md:text-5xl">Create, Sell and Grow</h2>
                         <p className="text-muted-foreground mb-6 mt-4 text-balance">Join a community of over 1000+ companies and developers who have already discovered the power of Tailark. </p>
 
-                        <Button render={<Link href="#" />} nativeButton={false}>Contact Sales</Button>
+                        <Button><a href="#">Contact Sales</a></Button>
                     </div>
                 </div>
             </div>

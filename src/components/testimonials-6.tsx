@@ -17,11 +17,11 @@ export default function TestimonialsSection() {
                         <p className="text-muted-foreground text-balance text-xl font-medium">
                             Stripe leveraged our platform to streamline payment processing workflows, <strong className="text-foreground">resulting in a 40% reduction in integration time for new merchants.</strong>{' '}
                         </p>
-                        <Button size="sm" variant="outline" className="w-fit pr-1.5" render={<Link href="#" />} nativeButton={false}>Read Case Study
+                        <Button size="sm" variant="outline" className="w-fit pr-1.5"><a href="#">Read Case Study
                                                         <ChevronRight
-                                                            className="scale-90 opacity-50"
+                                                            className="inline scale-90 opacity-50"
                                                             strokeWidth="2.5"
-                                                        /></Button>
+                                                        /></a></Button>
                         <div className="row-span-2 grid grid-rows-subgrid gap-8 border-t pt-8">
                             <p className='text-foreground self-end text-balance before:mr-1 before:content-["\201C"] after:ml-1 after:content-["\201D"]'>The platform has dramatically improved our payment processing capabilities. We now onboard merchants 40% faster while maintaining top-tier security standards. The developer experience is exceptional.</p>
                             <div className="flex items-center gap-3">
@@ -46,11 +46,11 @@ export default function TestimonialsSection() {
                         <p className="text-muted-foreground self-end text-balance text-xl font-medium">
                             Prime utilized our recommendation engine to <strong className="text-foreground">increase viewer engagement by 27% and content discovery by 35%</strong>. Our machine learning algorithms helped them deliver.
                         </p>
-                        <Button size="sm" variant="outline" className="w-fit pr-1.5" render={<Link href="#" />} nativeButton={false}>Read Case Study
+                        <Button size="sm" variant="outline" className="w-fit pr-1.5"><a href="#">Read Case Study
                                                         <ChevronRight
-                                                            className="scale-90 opacity-50"
+                                                            className="inline scale-90 opacity-50"
                                                             strokeWidth="2.5"
-                                                        /></Button>
+                                                        /></a></Button>
 
                         <div className="row-span-2 grid grid-rows-subgrid gap-8 border-t pt-8">
                             <p className='text-foreground text-balance before:mr-1 before:content-["\201C"] after:ml-1 after:content-["\201D"]'>The recommendation engine has revolutionized how our users discover content. We've measured significant improvements in engagement metrics, and the personalization capabilities continue to exceed our expectations.</p>

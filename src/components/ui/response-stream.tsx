@@ -1,4 +1,4 @@
-import { cn } from "@/components/lib/utils"
+import { cn } from "@/lib/utils"
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 
 export type Mode = 'typewriter' | 'fade'
@@ -279,13 +279,13 @@ function useTextStream({ textStream, speed = 20, mode = 'typewriter', onComplete
 export type ResponseStreamProps = {
     textStream: string | AsyncIterable<string>
     mode?: Mode
-    speed?: number / 1-100, where 1 is slowest and 100 is fastest
+    speed?: number // 1-100, where 1 is slowest and 100 is fastest
     className?: string
     onComplete?: () => void
-    as?: keyof React.JSX.IntrinsicElements / Element type to render
-    fadeDuration?: number / Custom fade duration in ms (overrides speed)
-    segmentDelay?: number / Custom delay between segments in ms (overrides speed)
-    characterChunkSize?: number / Custom characters per frame for typewriter mode (overrides speed)
+    as?: keyof React.JSX.IntrinsicElements // Element type to render
+    fadeDuration?: number // Custom fade duration in ms (overrides speed)
+    segmentDelay?: number // Custom delay between segments in ms (overrides speed)
+    characterChunkSize?: number // Custom characters per frame for typewriter mode (overrides speed)
 }
 
 function ResponseStream({ textStream, mode = 'typewriter', speed = 20, className = '', onComplete, as = 'div', fadeDuration, segmentDelay, characterChunkSize }: ResponseStreamProps) {
@@ -311,7 +311,7 @@ function ResponseStream({ textStream, mode = 'typewriter', speed = 20, className
         }
     }, [isComplete])
 
-    / fadeStyle is the style for the fade animation
+    // fadeStyle is the style for the fade animation
     const fadeStyle = `
     @keyframes fadeIn {
       from { opacity: 0; }

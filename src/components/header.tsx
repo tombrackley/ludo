@@ -142,7 +142,7 @@ export default function HeaderThree() {
 
                         <div className="max-lg:in-data-[state=active]:mt-6 in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
                             <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                                <Button variant="outline" size="sm" render={<Link href="#" />} nativeButton={false}><span>Sign In</span></Button>
+                                <Button variant="outline" size="sm"><a href="#">Sign In</a></Button>
                             </div>
                         </div>
                     </div>
@@ -158,8 +158,6 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
             role="navigation"
             className="w-full">
             <Accordion
-                type="single"
-                collapsible
                 className="**:hover:no-underline -mx-4 mt-0.5 space-y-0.5">
                 {mobileLinks.map((link, index) => {
                     if (link.groupName && link.links) {
@@ -269,14 +267,14 @@ const NavMenu = () => {
                             <span className="text-muted-foreground ml-3 text-xs font-medium uppercase">Explore</span>
                             <ul className="mt-1">
                                 {contentLinks.map((content, index) => (
-                                    <NavigationMenuLink key={index} className="!grid grid-cols-[auto_1fr] items-center gap-2.5 px-3" render={<Link href={content.href} />}>{content.icon}<div className="text-foreground text-sm font-medium">{content.name}</div></NavigationMenuLink>
+                                    <NavigationMenuLink key={index} asChild><a href={content.href} className="!grid grid-cols-[auto_1fr] items-center gap-2.5 px-3">{content.icon}<div className="text-foreground text-sm font-medium">{content.name}</div></a></NavigationMenuLink>
                                 ))}
                             </ul>
                         </div>
                     </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()} render={<Link href="#" />}>Pricing</NavigationMenuLink>
+                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}><a href="#">Pricing</a></NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}><RouterLink to="/contact">Contact</RouterLink></NavigationMenuLink>
@@ -289,10 +287,10 @@ const NavMenu = () => {
 function ListItem({ title, description, children, href, ...props }: React.ComponentPropsWithoutRef<'li'> & { href: string; title: string; description?: string }) {
     return (
         <li {...props}>
-            <NavigationMenuLink className="!grid grid-cols-[auto_1fr] items-center gap-2.5 p-3" render={<Link href={href} />}><div className="bg-illustration ring-foreground/10 before:bg-radial before:to-foreground/3 *:drop-shadow-black/6.5 relative flex size-9 items-center justify-center rounded-lg border border-transparent shadow shadow-sm ring-1 *:drop-shadow before:absolute before:inset-0 before:rounded-lg">{children}</div><div className="space-y-0.5">
+            <NavigationMenuLink asChild><a href={href} className="!grid grid-cols-[auto_1fr] items-center gap-2.5 p-3"><div className="bg-illustration ring-foreground/10 before:bg-radial before:to-foreground/3 *:drop-shadow-black/6.5 relative flex size-9 items-center justify-center rounded-lg border border-transparent shadow shadow-sm ring-1 *:drop-shadow before:absolute before:inset-0 before:rounded-lg">{children}</div><div className="space-y-0.5">
                                     <div className="text-foreground text-sm font-medium">{title}</div>
                                     <p className="text-muted-foreground line-clamp-1 text-xs">{description}</p>
-                                </div></NavigationMenuLink>
+                                </div></a></NavigationMenuLink>
         </li>
     )
 }

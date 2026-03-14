@@ -3,7 +3,7 @@
 
 import { cn } from '@/lib/utils'
 import { toJsxRuntime } from 'hast-util-to-jsx-runtime'
-import { JSX, useLayoutEffect, useState } from 'react'
+import { type JSX, useLayoutEffect, useState } from 'react'
 import { Fragment, jsx, jsxs } from 'react/jsx-runtime'
 import type { BundledLanguage } from 'shiki/bundle/web'
 

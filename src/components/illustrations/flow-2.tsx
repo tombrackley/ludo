@@ -6,7 +6,7 @@ export const Flow2Illustration = () => {
         <div
             aria-hidden
             className="relative flex min-h-[420px] w-fit min-w-[420px] flex-col items-center justify-center">
-            <style jsx>{`
+            <style>{`
                 @keyframes source-to-logo {
                     0% {
                         stroke-dashoffset: 400;

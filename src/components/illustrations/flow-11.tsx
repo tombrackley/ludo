@@ -5,7 +5,7 @@ export const Flow11Illustration = () => {
         <div
             aria-hidden
             className="relative flex min-h-[420px] w-fit min-w-[420px] items-center justify-center">
-            <style jsx>{`
+            <style>{`
                 @keyframes sync-left {
                     0% {
                         stroke-dashoffset: 300;

@@ -70,8 +70,6 @@ export default function FAQs() {
                             key={item.group}>
                             <h3 className="text-foreground pl-6 text-lg font-semibold">{item.group}</h3>
                             <Accordion
-                                type="single"
-                                collapsible
                                 className="-space-y-1">
                                 {item.items.map((item) => (
                                     <AccordionItem
