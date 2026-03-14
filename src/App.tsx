@@ -5,6 +5,7 @@ import LogoCloud from '@/components/logo-cloud'
 import DescriptionListSection from '@/components/description-list-6'
 import { PlatformFeatures } from '@/app/(marketing)/(home)/sections/platform-features'
 import FeaturesSection5 from '@/components/features-5'
+import FeaturesSection6 from '@/components/features-6'
 import { TestimonialsSection } from '@/app/(marketing)/(home)/sections/testimonials-section'
 import { MoreFeatures } from '@/app/(marketing)/(home)/sections/more-features'
 import { CallToAction } from '@/components/call-to-action'
@@ -42,6 +43,7 @@ function App() {
         <DescriptionListSection />
         <PlatformFeatures />
         <FeaturesSection5 />
+        <FeaturesSection6 />
         <TestimonialsSection />
         <MoreFeatures />
         <CallToAction />

@@ -22,6 +22,7 @@
     "motion": "^12.36.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "react-router-dom": "^7.13.1",
     "react-use-measure": "^2.1.7",
     "recharts": "^2.15.4",
     "shiki": "^4.0.2",

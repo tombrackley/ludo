@@ -1,8 +1,14 @@
 'use client'
-const Link = (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => <a {...props} />
+import React from 'react'
+import { Link as RouterLink } from 'react-router-dom'
+const Link = React.forwardRef<HTMLAnchorElement, React.AnchorHTMLAttributes<HTMLAnchorElement> & { href?: string }>(({ href, ...props }, ref) => {
+    if (href && !href.startsWith('#')) {
+        return <RouterLink ref={ref} to={href} {...props} />
+    }
+    return <a ref={ref} href={href} {...props} />
+})
 import { LogoIcon } from '@/components/logo'
 import { Button } from '@/components/ui/button'
-import React from 'react'
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from '@/components/ui/navigation-menu'
 import { Menu, X, CreditCard, BarChart3, Users, Ticket, FerrisWheel, Monitor, Waves, Gamepad2, Globe, Smartphone } from 'lucide-react'
 import { useMedia } from '@/hooks/use-media'
@@ -92,7 +98,7 @@ const mobileLinks: MobileLink[] = [
         links: [...useCases, ...contentLinks],
     },
     { name: 'Pricing', href: '#' },
-    { name: 'Company', href: '#' },
+    { name: 'Contact', href: '/contact' },
 ]
 
 export default function HeaderThree() {
@@ -190,14 +196,23 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
             </Accordion>
             {mobileLinks.map((link, index) => {
                 if (link.name && link.href) {
-                    return (
-                        <Link
+                    const isExternal = link.href.startsWith('#')
+                    return isExternal ? (
+                        <a
                             key={index}
                             href={link.href}
                             onClick={closeMenu}
                             className="group relative block border-0 border-b py-4 text-lg">
                             {link.name}
-                        </Link>
+                        </a>
+                    ) : (
+                        <RouterLink
+                            key={index}
+                            to={link.href}
+                            onClick={closeMenu}
+                            className="group relative block border-0 border-b py-4 text-lg">
+                            {link.name}
+                        </RouterLink>
                     )
                 }
                 return null
@@ -264,7 +279,7 @@ const NavMenu = () => {
                     <NavigationMenuLink className={navigationMenuTriggerStyle()} render={<Link href="#" />}>Pricing</NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()} render={<Link href="#" />}>Company</NavigationMenuLink>
+                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}><RouterLink to="/contact">Contact</RouterLink></NavigationMenuLink>
                 </NavigationMenuItem>
             </NavigationMenuList>
         </NavigationMenu>

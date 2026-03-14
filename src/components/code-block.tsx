@@ -1,20 +1,52 @@
+// Source: https://github.com/origin-space/originui/blob/main/components/code-block.tsx
+'use client'
+
 import { cn } from '@/lib/utils'
 import { toJsxRuntime } from 'hast-util-to-jsx-runtime'
 import { JSX, useLayoutEffect, useState } from 'react'
 import { Fragment, jsx, jsxs } from 'react/jsx-runtime'
-import { codeToHast, type BundledLanguage } from 'shiki/bundle/web'
+import type { BundledLanguage } from 'shiki/bundle/web'
 
-export async function highlight(code: string, lang: BundledLanguage, theme?: string) {
+const highlightCache = new Map()
+
+let shikiPromise: Promise<typeof import('shiki/bundle/web')> | null = null
+
+function getShiki() {
+    if (!shikiPromise) {
+        shikiPromise = import('shiki/bundle/web')
+    }
+    return shikiPromise
+}
+
+export async function highlight(code: string, lang: BundledLanguage) {
+    const cacheKey = `${lang}:${code.length}:${code.slice(0, 50)}:${code.slice(-50)}`
+
+    const cached = highlightCache.get(cacheKey)
+    if (cached) return cached
+
+    const { codeToHast } = await getShiki()
+
     const hast = await codeToHast(code, {
         lang,
-        theme: theme || 'github-dark',
+        themes: {
+            light: 'github-light',
+            dark: 'vesper',
+        },
     })
 
-    return toJsxRuntime(hast, {
+    const result = toJsxRuntime(hast, {
         Fragment,
         jsx,
         jsxs,
     }) as JSX.Element
+
+    if (highlightCache.size > 100) {
+        const firstKey = highlightCache.keys().next().value
+        if (firstKey) highlightCache.delete(firstKey)
+    }
+    highlightCache.set(cacheKey, result)
+
+    return result
 }
 
 type Props = {
@@ -28,11 +60,10 @@ type Props = {
     lineNumbers?: boolean
 }
 
-export default function CodeBlock({ code, lang, initial, maxHeight, preHighlighted, theme, className }: Props) {
-    const [content, setContent] = useState<JSX.Element | null>(preHighlighted || initial || null)
+export default function CodeBlock({ code, lang, initial, maxHeight=940, preHighlighted, theme, className }: Props) {
+    const [content, setContent] = useState(preHighlighted || initial || null)
 
     useLayoutEffect(() => {
-        // If we have pre-highlighted content, skip effect
         if (preHighlighted) {
             return
         }
@@ -40,13 +71,8 @@ export default function CodeBlock({ code, lang, initial, maxHeight, preHighlight
         let isMounted = true
 
         if (code) {
-            highlight(code, lang, theme).then((result) => {
+            highlight(code, lang).then((result) => {
                 if (isMounted) setContent(result)
-            })
-        } else {
-            // Use setTimeout to avoid synchronous setState in effect
-            Promise.resolve().then(() => {
-                if (isMounted) setContent(<pre className="rounded-lg bg-zinc-950 p-4">No code available</pre>)
             })
         }
 
@@ -55,11 +81,13 @@ export default function CodeBlock({ code, lang, initial, maxHeight, preHighlight
         }
     }, [code, lang, theme, preHighlighted])
 
-    return (
+    return content ? (
         <div
-            className={cn('[&_pre]:max-h-(--pre-max-height) *:text-[11px]/5! [&_pre]:min-h-128 [&_pre]:bg-transparent! [&_code]:font-mono [&_pre]:overflow-auto [&_pre]:border-l [&_pre]:py-3 [&_pre]:leading-snug', className)}
+            className={cn('[&_pre]:no-scrollbar max-h-(--pre-max-height) [&_code]:text-[13px]/2 [&_code]:font-mono [&_pre]:border-l [&_pre]:p-2 [&_pre]:leading-snug', className)}
             style={{ '--pre-max-height': `${maxHeight}px` } as React.CSSProperties}>
-            {content ? content : <pre className="flex size-full items-center justify-center p-4">Loading...</pre>}
+            {content}
         </div>
+    ) : (
+        <pre className="rounded-lg p-4 text-xs">Loading...</pre>
     )
 }

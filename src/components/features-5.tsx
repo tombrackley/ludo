@@ -1,19 +1,21 @@
-import { LayoutIllustration } from "@/components/ui/illustrations/layout-illustration"
-
 export default function FeaturesSection5() {
     return (
         <section className="bg-background py-24">
             <div className="mx-auto w-full max-w-5xl px-6">
                 <div className="relative">
                     <div className="z-10 max-w-xl">
-                        <h2 className="mb-4 text-4xl font-semibold">Multiple payment methods, one settlement layer</h2>
+                        <h2 className="mb-4 text-4xl font-semibold">Real-time reporting, full transparency</h2>
                         <p className="mb-8 text-lg">
-                            Cash, card, wristbands and mobile pay all run through one system — so you're not juggling spreadsheets mid-event. <span className="text-muted-foreground">Vendor payouts, commissions, and reconciliation happen automatically. One dashboard, one source of truth for your whole team.</span>
+                            Every transaction is visible the moment it happens — across every vendor, every terminal, every payment method. <span className="text-muted-foreground">Ludo gives organisers rich, real-time reporting with full transparency, so you always know exactly what's moving through your event without waiting for end-of-day exports.</span>
                         </p>
                     </div>
 
-                    <div className="-translate-x-44 md:translate-x-0">
-                        <LayoutIllustration />
+                    <div>
+                        <img
+                            src="/ludo-transparent-reporting.png"
+                            alt="Ludo reporting dashboard showing real-time top-up transactions"
+                            className="w-full rounded-2xl"
+                        />
                     </div>
                 </div>
             </div>
