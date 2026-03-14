@@ -1,5 +1,6 @@
 import Header from '@/components/header'
 import FooterSection from '@/components/footer'
+import { usePageMeta } from '@/hooks/use-page-meta'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Link } from 'react-router-dom'
@@ -111,6 +112,7 @@ const faqItems = [
 ]
 
 export default function ConferencesPage() {
+    usePageMeta('Conferences & Expos — Ludo Leisure Suite', 'Session scheduling, dynamic QR badge access, indoor wayfinding, and unified payments for multi-day conferences and expos.')
     return (
         <>
             <Header />

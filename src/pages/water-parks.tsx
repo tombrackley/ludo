@@ -1,5 +1,6 @@
 import Header from '@/components/header'
 import FooterSection from '@/components/footer'
+import { usePageMeta } from '@/hooks/use-page-meta'
 import { Button } from '@/components/ui/button'
 import { Link } from 'react-router-dom'
 import {
@@ -92,6 +93,7 @@ const faqItems = [
 ]
 
 export default function WaterParksPage() {
+    usePageMeta('Water Parks & Attractions — Ludo Leisure Suite', 'Waterproof NFC wristbands, family spend controls, fast self-service top-ups, and deterministic vendor settlement for water parks and attractions.')
     return (
         <>
             <Header />

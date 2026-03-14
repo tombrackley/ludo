@@ -1,6 +1,7 @@
 import Header from '@/components/header'
 import FooterSection from '@/components/footer'
 import FAQs from '@/components/faqs-2'
+import { usePageMeta } from '@/hooks/use-page-meta'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Link } from 'react-router-dom'
@@ -112,6 +113,7 @@ const faqItems = [
 ]
 
 export default function RoyalShowsPage() {
+    usePageMeta('Agricultural Shows — Ludo Leisure Suite', 'NFC wristband payments, real-time vendor settlement, and self-service kiosks for agricultural shows and showgrounds. Proven at 120k+ daily visitors with 99.99% uptime.')
     return (
         <>
             <Header />

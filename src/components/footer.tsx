@@ -30,7 +30,7 @@ export default function FooterSection() {
             {/* Background carnival crowd image */}
             <div className="pointer-events-none absolute inset-0">
                 <img
-                    src="/footer-carnival-crowd.png"
+                    src="/ludo-event-software-footer-watercolour-effect.png"
                     alt=""
                     className="h-full w-full object-cover object-bottom opacity-70"
                 />
