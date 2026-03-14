@@ -3,7 +3,7 @@ import { Card } from '@/components/ui/card'
 export default function BentoEight() {
     return (
         <div className="@container">
-            <div className="mx-auto w-full max-w-5xl px-6 xl:px-0">
+            <div className="mx-auto w-full max-w-[1200px] px-6 xl:px-0">
                 <div className="@xl:grid-cols-2 grid gap-3">
                     <Card className="group grid grid-rows-[auto_1fr] gap-8 overflow-hidden rounded-2xl p-8">
                         <div>

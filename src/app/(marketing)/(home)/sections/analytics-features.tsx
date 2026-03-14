@@ -6,7 +6,7 @@ import { Cloudflare } from '@/components/ui/svgs/cloudflare'
 export function AnalyticsFeatures() {
     return (
         <section className="@container py-16">
-            <div className="mx-auto max-w-5xl px-6">
+            <div className="mx-auto max-w-[1200px] px-6">
                 <div className="@3xl:grid-cols-3 @3xl:gap-12 relative grid">
                     <div className="@3xl:pb-3 flex flex-col justify-between gap-12">
                         <div>

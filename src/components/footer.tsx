@@ -1,142 +1,118 @@
 import { Logo } from '@/components/logo'
-import type { AnchorHTMLAttributes } from 'react'
-const Link = ({ href, children, ...props }: AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }) => <a href={href} {...props}>{children}</a>
+import { Button } from '@/components/ui/button'
 
 const links = [
     {
-        group: 'Product',
+        group: 'Platform',
         items: [
-            {
-                title: 'Features',
-                href: '#',
-            },
-            {
-                title: 'Solution',
-                href: '#',
-            },
-            {
-                title: 'Partnerships',
-                href: '#',
-            },
-            {
-                title: 'Mobile App',
-                href: '#',
-            },
+            { title: 'Cashless Payments', href: '#' },
+            { title: 'Real-Time Analytics', href: '#' },
+            { title: 'Vendor Settlement', href: '#' },
+            { title: 'Ticketing & Access', href: '#' },
         ],
     },
     {
-        group: 'Company',
+        group: 'Solutions',
         items: [
-            {
-                title: 'About',
-                href: '#',
-            },
-            {
-                title: 'Licence',
-                href: '#',
-            },
-            {
-                title: 'Privacy',
-                href: '#',
-            },
+            { title: 'Royal Shows & Expos', href: '#' },
+            { title: 'Conferences', href: '#' },
+            { title: 'Waterparks', href: '#' },
+            { title: 'Arcades & FECs', href: '#' },
         ],
     },
 ]
 
 export default function FooterSection() {
     return (
-        <footer
-            role="contentinfo"
-            className="py-8 sm:py-20 lg:pt-32">
-            <div className="mx-auto max-w-5xl space-y-16 px-6">
-                <div className="grid gap-12 md:grid-cols-5">
-                    <div className="space-y-6 md:col-span-2 md:space-y-12">
-                        <Link
-                            href="/"
-                            aria-label="go home"
-                            className="block size-fit">
+        <footer className="relative overflow-hidden border-t bg-background">
+            {/* Gradient glow bar at the top */}
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-[300px]">
+                <div className="absolute left-1/2 top-0 h-[200px] w-[900px] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(236,72,153,0.2)_0%,rgba(168,85,247,0.15)_25%,rgba(59,130,246,0.1)_50%,transparent_70%)] blur-2xl" />
+            </div>
+
+            {/* CTA Section */}
+            <div className="relative mx-auto max-w-[1200px] px-6 pt-28 pb-24 text-center">
+                <h2 className="text-balance text-4xl font-semibold md:text-5xl">
+                    Venue experiences that{' '}
+                    <span className="italic">just work</span>
+                </h2>
+                <p className="text-muted-foreground mx-auto mt-4 max-w-xl text-balance">
+                    Join the venues and events already running on Ludo. Book a demo to see how it all comes together.
+                </p>
+                <div className="mt-8 flex justify-center gap-3">
+                    <Button variant="outline" className="w-40">Book a Demo</Button>
+                    <Button className="w-40">Contact Us</Button>
+                </div>
+            </div>
+
+            {/* Divider + status row */}
+            <div className="mx-auto max-w-[1200px] px-6">
+                <div className="h-px bg-border" />
+                <div className="flex flex-wrap items-center justify-between gap-4 py-6">
+                    <div className="flex items-center gap-3">
+                        <a href="/" aria-label="go home" className="block w-fit">
                             <Logo />
-                        </Link>
-
-                        <p className="text-muted-foreground text-balance text-sm">Tailark is a platform for building AI-powered applications.</p>
+                        </a>
                     </div>
-
-                    <div className="col-span-3 grid gap-6 sm:grid-cols-3">
-                        {links.map((link, index) => (
-                            <div
-                                key={index}
-                                className="space-y-4 text-sm">
-                                <span className="block font-medium">{link.group}</span>
-
-                                <div className="flex flex-wrap gap-4 sm:flex-col">
-                                    {link.items.map((item, index) => (
-                                        <Link
-                                            key={index}
-                                            href={item.href}
-                                            className="text-muted-foreground hover:text-primary block duration-150">
-                                            <span>{item.title}</span>
-                                        </Link>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
-
-                        <div className="space-y-4">
-                            <span className="block font-medium">Community</span>
-                            <div className="flex flex-wrap gap-3 text-sm">
-                                <Link
-                                    href="#"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="X/Twitter"
-                                    className="text-muted-foreground hover:text-primary block">
-                                    <svg
-                                        className="size-5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="1em"
-                                        height="1em"
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            fill="currentColor"
-                                            d="M10.488 14.651L15.25 21h7l-7.858-10.478L20.93 3h-2.65l-5.117 5.886L8.75 3h-7l7.51 10.015L2.32 21h2.65zM16.25 19L5.75 5h2l10.5 14z"></path>
-                                    </svg>
-                                </Link>
-                                <Link
-                                    href="#"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="LinkedIn"
-                                    className="text-muted-foreground hover:text-primary block">
-                                    <svg
-                                        className="size-5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="1em"
-                                        height="1em"
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            fill="currentColor"
-                                            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"></path>
-                                    </svg>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    aria-hidden
-                    className="bg-size-[6px_1px] h-px bg-[linear-gradient(90deg,var(--color-foreground)_1px,transparent_1px)] bg-repeat-x opacity-25"
-                />
-                <div className="flex flex-wrap justify-between gap-4">
-                    <span className="text-muted-foreground text-sm">© {new Date().getFullYear()} Tailark, All rights reserved </span>
-
-                    <div className="ring-foreground/5 bg-card flex items-center gap-2 rounded-full border border-transparent py-1 pl-2 pr-4 shadow ring-1">
+                    <div className="flex items-center gap-2 rounded-full border px-3 py-1.5">
                         <div className="relative flex size-3">
-                            <span className="duration-1500 absolute inset-0 block size-full animate-pulse rounded-full bg-emerald-100"></span>
-                            <span className="relative m-auto block size-1 rounded-full bg-emerald-500"></span>
+                            <span className="absolute inset-0 block size-full animate-pulse rounded-full bg-emerald-100" />
+                            <span className="relative m-auto block size-1 rounded-full bg-emerald-500" />
                         </div>
-                        <span className="text-sm">All Systems Normal</span>
+                        <span className="text-sm text-emerald-600">All systems operational</span>
                     </div>
                 </div>
+                <div className="h-px bg-border" />
+            </div>
+
+            {/* Footer links */}
+            <div className="relative mx-auto max-w-[1200px] px-6 py-12">
+                <div className="grid gap-12 sm:grid-cols-4">
+                    {links.map((link, index) => (
+                        <div key={index} className="space-y-4 text-sm">
+                            <span className="block font-medium">{link.group}</span>
+                            <div className="flex flex-wrap gap-3 sm:flex-col">
+                                {link.items.map((item, idx) => (
+                                    <a
+                                        key={idx}
+                                        href={item.href}
+                                        className="text-muted-foreground transition-colors duration-150 hover:text-foreground">
+                                        {item.title}
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+
+                    <div className="space-y-4 text-sm">
+                        <span className="block font-medium">Connect</span>
+                        <div className="flex flex-col gap-3">
+                            <a href="/contact" className="text-muted-foreground transition-colors duration-150 hover:text-foreground">Contact Us</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors duration-150 hover:text-foreground">LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <div className="flex items-start justify-end">
+                        <img src="/ludo-logo-mark.svg" alt="Ludo" className="h-10 w-auto opacity-20" />
+                    </div>
+                </div>
+            </div>
+
+            {/* Bottom copyright */}
+            <div className="mx-auto max-w-[1200px] px-6 pb-8">
+                <div className="flex flex-wrap items-center gap-1 text-sm text-muted-foreground">
+                    <span>© {new Date().getFullYear()} Ludo Leisure Suite. All rights reserved.</span>
+                    <span className="mx-1">
+                        <a href="#" className="hover:text-foreground transition-colors duration-150">Terms & Conditions</a>
+                        {' | '}
+                        <a href="#" className="hover:text-foreground transition-colors duration-150">Privacy Policy</a>
+                    </span>
+                </div>
+            </div>
+
+            {/* Large faded logo at bottom */}
+            <div className="pointer-events-none relative mx-auto mt-12 max-w-[1200px] px-6 mask-b-from-30%">
+                <Logo className="h-auto w-full opacity-[0.08] grayscale" />
             </div>
         </footer>
     )

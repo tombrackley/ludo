@@ -3,7 +3,7 @@ import { FileWarning, Layers, ChartPie, Clock } from 'lucide-react'
 export default function DescriptionListSection() {
     return (
         <section className="bg-background py-16 md:py-32">
-            <div className="mx-auto max-w-5xl px-6">
+            <div className="mx-auto max-w-[1200px] px-6">
                 <div className="space-y-12">
                     <h2 className="text-foreground text-balance text-4xl font-semibold">Every major event has<br />the same four pain points</h2>
                     <div className="@container lg:col-span-2">

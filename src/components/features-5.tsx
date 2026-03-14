@@ -1,7 +1,7 @@
 export default function FeaturesSection5() {
     return (
         <section className="bg-background py-24">
-            <div className="mx-auto w-full max-w-5xl px-6">
+            <div className="mx-auto w-full max-w-[1200px] px-6">
                 <div className="relative">
                     <div className="z-10 max-w-xl">
                         <h2 className="mb-4 text-4xl font-semibold">Real-time reporting, full transparency</h2>

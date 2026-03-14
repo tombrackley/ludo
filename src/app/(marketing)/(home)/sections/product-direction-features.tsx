@@ -22,7 +22,7 @@ const features = [
 export function ProductDirectionFeaturesSection() {
     return (
         <section className="bg-background py-24">
-            <div className="mx-auto max-w-5xl px-6">
+            <div className="mx-auto max-w-[1200px] px-6">
                 <div className="mx-auto max-w-4xl text-center">
                     <span className="text-primary bg-primary/5 border-primary/10 rounded-full border px-2 py-1 text-sm font-medium">Billing</span>
                     <h1 className="mt-4 text-balance text-4xl font-semibold md:text-5xl lg:text-6xl">Streamline Your Invoicing Process</h1>

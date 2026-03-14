@@ -8,7 +8,7 @@ const GLODIE_AVATAR = 'https://avatars.githubusercontent.com/u/99137927?v=4'
 export function TestimonialsSection() {
     return (
         <section className="py-24">
-            <div className="mx-auto w-full max-w-5xl px-6">
+            <div className="mx-auto w-full max-w-[1200px] px-6">
                 <div className="mx-auto mb-16 max-w-2xl space-y-6 text-center">
                     <span className="text-primary font-mono text-sm uppercase">Testimonials</span>
                     <h2 className="text-foreground mt-8 text-balance text-4xl font-semibold md:text-5xl">Trusted by event operators</h2>
@@ -69,7 +69,7 @@ export function TestimonialsSection() {
                 </div>
 
                 <div className="mx-auto mt-24 max-w-2xl text-center">
-                    <h2 className="text-foreground text-balance text-4xl font-semibold md:text-5xl">See Ludo in action at the Sydney Royal Easter Show</h2>
+                    <h2 className="mb-4 text-4xl font-semibold">See Ludo in action at the Sydney Royal Easter Show</h2>
                     <p className="text-muted-foreground mt-4 text-balance text-lg">Shane McGrath, Head of Operations at the Sydney Royal Easter Show, walks through how Ludo transformed their guest experience – from NFC wristbands to self-service kiosks.</p>
                 </div>
 

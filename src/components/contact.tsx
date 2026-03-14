@@ -5,7 +5,7 @@ const Link = (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => <a {...pr
 export default function Contact() {
     return (
         <section className="bg-background py-24">
-            <div className="@container mx-auto max-w-5xl px-2">
+            <div className="@container mx-auto max-w-[1200px] px-2">
                 <div className="mx-auto max-w-4xl">
                     <div className="mx-auto max-w-2xl px-6">
                         <h1 className="text-balance text-4xl font-semibold md:text-5xl lg:tracking-tight">Get in Touch</h1>

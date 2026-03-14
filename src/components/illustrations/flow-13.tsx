@@ -2,7 +2,6 @@
 
 import { Database, Store, DollarSign, CreditCard, Ticket, Smartphone } from 'lucide-react'
 import { motion } from 'motion/react'
-import { LogoIcon } from "@/components/logo"
 import { useRef, useState, useLayoutEffect, useCallback } from 'react'
 
 const shootTransition = {
@@ -226,11 +225,8 @@ export const Flow13Illustration = () => {
                     <div className="absolute inset-3 opacity-50">
                         <div className="bg-linear-to-r absolute inset-0 animate-pulse rounded-xl from-purple-400 to-blue-500 blur-md" />
                     </div>
-                    <div ref={logoRef} className="bg-radial to-card/50 from-card shadow-black/6.5 ring-border-illustration relative m-auto flex size-11 items-center justify-center rounded-full from-35% shadow-xl ring-1 backdrop-blur">
-                        <LogoIcon
-                            className="drop-shadow-background size-4 drop-shadow"
-                            uniColor
-                        />
+                    <div ref={logoRef} className="relative m-auto flex size-11 items-center justify-center overflow-hidden rounded-full shadow-xl shadow-black/6.5 ring-1 ring-border-illustration">
+                        <img src="/ludo-icon.png" alt="" className="size-full object-cover" />
                     </div>
                 </div>
 

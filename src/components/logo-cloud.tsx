@@ -12,7 +12,7 @@ const logos = [
 export default function LogoCloudTwo() {
     return (
         <section className="py-16">
-            <div className="relative m-auto max-w-5xl px-6 text-center">
+            <div className="relative m-auto max-w-[1200px] px-6 text-center">
                 <h2 className="text-center text-xl font-normal">Powering some of the biggest events across Australia and the world</h2>
 
                 <div className="mx-auto my-12 grid max-w-3xl grid-cols-3 items-center gap-x-6 gap-y-8 sm:grid-cols-4 sm:gap-y-12">

@@ -10,7 +10,7 @@ export function MoreFeatures() {
     return (
         <section className="relative">
             <div className="@container relative py-16 lg:py-24">
-                <div className="mx-auto w-full max-w-5xl px-6">
+                <div className="mx-auto w-full max-w-[1200px] px-6">
                     <div>
                         <span className="text-primary font-mono text-sm uppercase">What you get</span>
                         <div className="mt-8 grid items-end gap-6 md:grid-cols-2">

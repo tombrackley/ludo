@@ -10,7 +10,7 @@ const GLODIE_AVATAR = 'https://avatars.githubusercontent.com/u/99137927?v=4'
 export default function TestimonialsSection() {
     return (
         <section className="bg-background @container py-16 md:py-24 lg:py-32">
-            <div className="mx-auto max-w-5xl px-6">
+            <div className="mx-auto max-w-[1200px] px-6">
                 <div className="@4xl:grid-cols-2 grid gap-6 *:border *:border-transparent *:shadow-lg">
                     <Card className="bg-linear-to-b to-card row-span-5 grid grid-rows-subgrid gap-8 from-indigo-500/10 p-8">
                         <Stripe className="h-6 w-14" />
