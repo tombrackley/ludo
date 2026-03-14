@@ -58,19 +58,19 @@ const features: FeatureLink[] = [
 
 const useCases: FeatureLink[] = [
     {
-        href: '#royal-shows',
+        href: '/solutions/royal-shows',
         name: 'Royal Shows & Expos',
         description: 'Large-scale event cashless systems',
         icon: <FerrisWheel className="stroke-foreground fill-emerald-500/15" />,
     },
     {
-        href: '#conferences',
+        href: '/solutions/conferences',
         name: 'Conferences',
         description: 'Streamlined attendee experiences',
         icon: <Monitor className="stroke-foreground fill-indigo-500/15" />,
     },
     {
-        href: '#water-parks',
+        href: '/solutions/water-parks',
         name: 'Water Parks',
         description: 'Waterproof cashless wearables',
         icon: <Waves className="stroke-foreground fill-blue-500/15" />,
@@ -84,8 +84,8 @@ const useCases: FeatureLink[] = [
 ]
 
 const contentLinks: FeatureLink[] = [
-    { name: 'All Solutions', href: '#solutions', icon: <Globe className="stroke-foreground fill-emerald-500/15" /> },
-    { name: 'Talk to Sales', href: '#contact', icon: <Smartphone className="stroke-foreground fill-indigo-500/15" /> },
+    { name: 'All Solutions', href: '/solutions', icon: <Globe className="stroke-foreground fill-emerald-500/15" /> },
+    { name: 'Talk to Sales', href: '/contact', icon: <Smartphone className="stroke-foreground fill-indigo-500/15" /> },
 ]
 
 const mobileLinks: MobileLink[] = [
