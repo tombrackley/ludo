@@ -24,14 +24,20 @@ const links = [
 
 export default function FooterSection() {
     return (
-        <footer className="relative overflow-hidden border-t bg-background">
-            {/* Gradient glow bar at the top */}
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-[300px]">
-                <div className="absolute left-1/2 top-0 h-[200px] w-[900px] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(236,72,153,0.2)_0%,rgba(168,85,247,0.15)_25%,rgba(59,130,246,0.1)_50%,transparent_70%)] blur-2xl" />
+        <footer className="relative overflow-hidden">
+            {/* Gradient from page gray to white */}
+            <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-48 bg-gradient-to-b from-zinc-50 to-transparent" />
+            {/* Background carnival crowd image */}
+            <div className="pointer-events-none absolute inset-0">
+                <img
+                    src="/footer-carnival-crowd.png"
+                    alt=""
+                    className="h-full w-full object-cover object-bottom"
+                />
             </div>
 
             {/* CTA Section */}
-            <div className="relative mx-auto max-w-[1200px] px-6 pt-28 pb-24 text-center">
+            <div className="relative z-20 mx-auto max-w-[1200px] px-6 pt-28 pb-24 text-center">
                 <h2 className="text-balance text-4xl font-semibold md:text-5xl">
                     Venue experiences that{' '}
                     <span className="italic">just work</span>
@@ -46,7 +52,7 @@ export default function FooterSection() {
             </div>
 
             {/* Divider + status row */}
-            <div className="mx-auto max-w-[1200px] px-6">
+            <div className="relative z-20 mx-auto max-w-[1200px] px-6">
                 <div className="h-px bg-border" />
                 <div className="flex flex-wrap items-center justify-between gap-4 py-6">
                     <div className="flex items-center gap-3">
@@ -66,7 +72,7 @@ export default function FooterSection() {
             </div>
 
             {/* Footer links */}
-            <div className="relative mx-auto max-w-[1200px] px-6 py-12">
+            <div className="relative z-20 mx-auto max-w-[1200px] px-6 py-12">
                 <div className="grid gap-12 sm:grid-cols-4">
                     {links.map((link, index) => (
                         <div key={index} className="space-y-4 text-sm">
@@ -99,7 +105,7 @@ export default function FooterSection() {
             </div>
 
             {/* Bottom copyright */}
-            <div className="mx-auto max-w-[1200px] px-6 pb-8">
+            <div className="relative mx-auto max-w-[1200px] px-6 pb-8">
                 <div className="flex flex-wrap items-center gap-1 text-sm text-muted-foreground">
                     <span>© {new Date().getFullYear()} Ludo Leisure Suite. All rights reserved.</span>
                     <span className="mx-1">
@@ -110,10 +116,8 @@ export default function FooterSection() {
                 </div>
             </div>
 
-            {/* Large faded logo at bottom */}
-            <div className="pointer-events-none relative mx-auto mt-12 max-w-[1200px] px-6 mask-b-from-30%">
-                <Logo className="h-auto w-full opacity-[0.08] grayscale" />
-            </div>
+            {/* Spacer for background image to show */}
+            <div className="h-[400px]" />
         </footer>
     )
 }
