@@ -5,10 +5,10 @@ import { motion } from 'motion/react'
 import { useRef, useState, useLayoutEffect, useCallback } from 'react'
 
 const shootTransition = {
-    duration: 1,
+    duration: 2.5,
     ease: 'easeInOut' as const,
     repeat: Infinity,
-    repeatDelay: 1.5,
+    repeatDelay: 2,
 }
 
 type PathData = {

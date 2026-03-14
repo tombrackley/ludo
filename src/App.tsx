@@ -29,10 +29,8 @@ function App() {
               One platform spanning payments, operations, and guest experience for agricultural shows, festivals, concert venues, and fairparks. Reliable uptime your team can count on. Simplicity they'll thank you for.
             </p>
             <div className="mt-8 flex justify-center gap-3">
-              <Button>Book a Demo</Button>
-              <Button variant="outline">
-                See How It Works
-              </Button>
+              <Button><a href="/contact">Book a Demo</a></Button>
+              <Button variant="outline"><a href="#see-ludo-in-action">See How It Works</a></Button>
             </div>
           </div>
           <HeroIllustration />

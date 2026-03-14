@@ -1,8 +1,6 @@
 import { ChevronRight } from 'lucide-react'
-import { Stripe } from '@/components/ui/svgs/stripe'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-import { Primevideo } from '@/components/ui/svgs/prime'
 
 const BERNARD_AVATAR = 'https://avatars.githubusercontent.com/u/31113941?v=4'
 const GLODIE_AVATAR = 'https://avatars.githubusercontent.com/u/99137927?v=4'
@@ -13,7 +11,7 @@ export default function TestimonialsSection() {
             <div className="mx-auto max-w-[1200px] px-6">
                 <div className="@4xl:grid-cols-2 grid gap-6 *:border *:border-transparent *:shadow-lg">
                     <Card className="bg-linear-to-b to-card row-span-5 grid grid-rows-subgrid gap-8 from-indigo-500/10 p-8">
-                        <Stripe className="h-6 w-14" />
+                        <img src="/sydney-royal-easter-show-logo.png" alt="Sydney Royal Easter Show" className="h-10 w-auto" />
                         <p className="text-muted-foreground text-balance text-xl font-medium">
                             Stripe leveraged our platform to streamline payment processing workflows, <strong className="text-foreground">resulting in a 40% reduction in integration time for new merchants.</strong>{' '}
                         </p>
@@ -42,7 +40,7 @@ export default function TestimonialsSection() {
                         </div>
                     </Card>
                     <Card className="bg-linear-to-b to-card row-span-5 grid grid-rows-subgrid gap-8 from-cyan-500/10 p-8">
-                        <Primevideo className="h-7 w-20" />
+                        <img src="/taronga-zoo-logo.png" alt="Taronga Zoo" className="h-8 w-auto" />
                         <p className="text-muted-foreground self-end text-balance text-xl font-medium">
                             Prime utilized our recommendation engine to <strong className="text-foreground">increase viewer engagement by 27% and content discovery by 35%</strong>. Our machine learning algorithms helped them deliver.
                         </p>

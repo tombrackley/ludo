@@ -1,6 +1,4 @@
-import { Stripe } from '@/components/ui/svgs/stripe'
 import { Card } from '@/components/ui/card'
-import { Primevideo } from '@/components/ui/svgs/prime'
 
 const BERNARD_AVATAR = 'https://avatars.githubusercontent.com/u/31113941?v=4'
 const GLODIE_AVATAR = 'https://avatars.githubusercontent.com/u/99137927?v=4'
@@ -17,50 +15,50 @@ export function TestimonialsSection() {
 
                 <div className="@container">
                     <div className="@4xl:grid-cols-2 grid gap-6 *:border *:border-transparent *:shadow-lg">
-                        <Card className="bg-linear-to-b to-card row-span-4 grid grid-rows-subgrid gap-8 from-indigo-500/10 p-8">
-                            <Stripe className="h-6 w-14" />
+                        <Card className="bg-linear-to-b to-card row-span-4 grid grid-rows-subgrid gap-8 from-indigo-500/10 !overflow-visible !p-8">
+                            <img src="/sydney-royal-easter-show-logo.png" alt="Sydney Royal Easter Show" className="h-9 w-auto" />
                             <p className="text-muted-foreground text-balance text-xl font-medium">
-                                Stripe leveraged our platform to streamline payment processing workflows, <strong className="text-foreground">resulting in a 40% reduction in integration time for new merchants.</strong>{' '}
+                                Implemented a full digital event platform delivering over <strong className="text-foreground">300k guest credit top-ups</strong>, <strong className="text-foreground">3 million vendor payments</strong>, and <strong className="text-foreground">1 million+ wristband and card redemptions</strong> across the Sydney Royal Easter Show.
                             </p>
                             <div className="row-span-2 grid grid-rows-subgrid gap-8 border-t pt-8">
-                                <p className='text-foreground self-end text-balance before:mr-1 before:content-["\201C"] after:ml-1 after:content-["\201D"]'>The platform has dramatically improved our payment processing capabilities. We now onboard merchants 40% faster while maintaining top-tier security standards. The developer experience is exceptional.</p>
+                                <p className='text-foreground self-end text-balance text-lg before:mr-1 before:content-["\201C"] after:ml-1 after:content-["\201D"]'>We needed to elevate our visitor experience, and we found a partner in Ludo capable of delivering everything we envisioned on a digital platform.</p>
                                 <div className="flex items-center gap-3">
                                     <div className="ring-foreground/10 aspect-square size-10 overflow-hidden rounded-lg border border-transparent shadow-md shadow-black/15 ring-1">
                                         <img
-                                            src={BERNARD_AVATAR}
-                                            alt="Bernard Ngandu's avatar"
+                                            src="/shane-mcgrath-headshot.webp"
+                                            alt="Shane McGrath's avatar"
                                             width={46}
                                             height={46}
                                             className="h-full w-full object-cover"
                                         />
                                     </div>
                                     <div className="space-y-px">
-                                        <p className="text-sm font-medium">Bernard Ngandu</p>
-                                        <p className="text-muted-foreground text-xs">Backend Engineer, Stripe</p>
+                                        <p className="text-sm font-medium">Shane McGrath</p>
+                                        <p className="text-muted-foreground text-xs">Head of Operations, Sydney Royal Easter Show</p>
                                     </div>
                                 </div>
                             </div>
                         </Card>
-                        <Card className="bg-linear-to-b to-card row-span-4 grid grid-rows-subgrid gap-8 from-cyan-500/10 p-8">
-                            <Primevideo className="h-7 w-20" />
+                        <Card className="bg-linear-to-b to-card row-span-4 grid grid-rows-subgrid gap-8 from-cyan-500/10 !overflow-visible !p-8">
+                            <img src="/taronga-zoo-logo.png" alt="Taronga Zoo" className="h-7 w-auto" />
                             <p className="text-muted-foreground self-end text-balance text-xl font-medium">
-                                Prime utilized our recommendation engine to <strong className="text-foreground">increase viewer engagement by 27% and content discovery by 35%</strong>. Our machine learning algorithms helped them deliver.
+                                Deployed NFC wristbands and cashless cards for event ticketing and entry, processing <strong className="text-foreground">50,000+ contactless check-ins</strong> across peak season events with <strong className="text-foreground">sub-second tap-to-enter speeds</strong> and <strong className="text-foreground">zero queuing bottlenecks</strong> at gates.
                             </p>
                             <div className="row-span-2 grid grid-rows-subgrid gap-8 border-t pt-8">
-                                <p className='text-foreground text-balance before:mr-1 before:content-["\201C"] after:ml-1 after:content-["\201D"]'>The recommendation engine has revolutionized how our users discover content. We&apos;ve measured significant improvements in engagement metrics, and the personalization capabilities continue to exceed our expectations.</p>
+                                <p className='text-foreground text-balance text-lg before:mr-1 before:content-["\201C"] after:ml-1 after:content-["\201D"]'>The cashless wristband rollout was seamless. Guest throughput increased measurably, and the data we get back is invaluable for planning future events.</p>
                                 <div className="flex items-center gap-3">
                                     <div className="ring-foreground/10 aspect-square size-10 overflow-hidden rounded-lg border border-transparent shadow-md shadow-black/15 ring-1">
                                         <img
-                                            src={GLODIE_AVATAR}
-                                            alt="Glodie Lukose's avatar"
+                                            src="/mark-kemp-headshot.webp"
+                                            alt="Mark Kemp's avatar"
                                             width={120}
                                             height={120}
                                             className="size-full object-cover"
                                         />
                                     </div>
                                     <div className="space-y-px">
-                                        <p className="text-sm font-medium">Glodie Lukose</p>
-                                        <p className="text-muted-foreground text-xs">Frontend Engineer, Prime Video</p>
+                                        <p className="text-sm font-medium">Mark Kemp</p>
+                                        <p className="text-muted-foreground text-xs">Digital Transformation, Taronga Zoo</p>
                                     </div>
                                 </div>
                             </div>
@@ -69,7 +67,7 @@ export function TestimonialsSection() {
                 </div>
 
                 <div className="mx-auto mt-24 max-w-2xl text-center">
-                    <h2 className="mb-4 text-4xl font-semibold">See Ludo in action at the Sydney Royal Easter Show</h2>
+                    <h2 id="see-ludo-in-action" className="mb-4 scroll-mt-24 text-4xl font-semibold">See Ludo in action at the Sydney Royal Easter Show</h2>
                     <p className="text-muted-foreground mt-4 text-balance text-lg">Shane McGrath, Head of Operations at the Sydney Royal Easter Show, walks through how Ludo transformed their guest experience – from NFC wristbands to self-service kiosks.</p>
                 </div>
 

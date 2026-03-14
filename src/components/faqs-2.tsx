@@ -58,7 +58,7 @@ export default function FAQs() {
     return (
         <section className="bg-background py-16 md:py-24">
             <div className="mx-auto max-w-3xl px-1 md:px-6">
-                <div className="max-w-lg max-md:px-6">
+                <div className="max-md:px-6 text-center">
                     <h2 className="text-foreground text-4xl font-semibold">Frequently Asked Questions</h2>
                     <p className="text-muted-foreground mt-4 text-balance text-lg">Everything you need to know about deploying the platform at your venue or event.</p>
                 </div>

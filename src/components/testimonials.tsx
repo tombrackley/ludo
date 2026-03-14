@@ -4,54 +4,35 @@ import { useState, useCallback, useRef } from 'react'
 import { ChevronDown, ChevronRight, ChevronUp, Star, Zap } from 'lucide-react'
 
 import { Card } from '@/components/ui/card'
-import { Stripe } from '@/components/ui/svgs/stripe'
-import { Hulu } from '@/components/ui/svgs/hulu'
-import { PrimeVideo } from '@/components/ui/svgs/prime-video'
 import { Button } from '@/components/ui/button'
 import { TextEffect } from '@/components/ui/text-effect'
 
 import { cn } from '@/lib/utils'
-import { BERNARD_AVATAR, GLODIE_AVATAR, MESCHAC_AVATAR } from '@/lib/const'
 
 const testimonialsData = [
     {
-        id: 'stripe' as const,
-        LogoComponent: Stripe,
-        cardLogoProps: { className: 'h-7 w-16' },
-        buttonLogoProps: { height: 20, width: 56 },
-        text: 'The component library from Tailark has been a game-changer for our development team. We can quickly build consistent interfaces across our payment platform with minimal effort. The documentation is excellent and the customization options are exactly what we needed.',
-        avatar: BERNARD_AVATAR,
-        name: 'Bernard Ngandu',
-        title: 'Backend Engineer',
-        brandColor: '#635bff',
-        resultText: '40% Reduction in integration time for new merchants',
-        resultText2: '50% faster onboarding for new clients',
+        id: 'easter-show' as const,
+        logo: '/sydney-royal-easter-show-logo.png',
+        logoClass: 'h-10 w-auto',
+        buttonLogoClass: 'h-5 w-auto',
+        text: 'Ludo transformed how we manage payments across 500+ vendors at the Sydney Royal Easter Show. Real-time settlement and transparent reporting meant we could focus on the event, not reconciliation.',
+        name: 'Sydney Royal Easter Show',
+        title: 'Event Operations',
+        brandColor: '#E23D28',
+        resultText: '500+ vendors onboarded across a single event',
+        resultText2: 'Real-time settlement for all food & ride operators',
     },
     {
-        id: 'hulu' as const,
-        LogoComponent: Hulu,
-        cardLogoProps: { className: 'h-7 w-16' },
-        buttonLogoProps: { height: 20, width: 44 },
-        text: 'Implementing Tailark components helped us create a more engaging streaming interface. The responsive design system works flawlessly across devices, and we were able to maintain our brand identity while leveraging their robust component architecture.',
-        avatar: MESCHAC_AVATAR,
-        name: 'Méschac Irung',
-        title: 'UI Engineer',
-        brandColor: '#1CE783',
-        resultText: '25% Increase in total user engagement',
-        resultText2: '30% higher retention rate for subscribers',
-    },
-    {
-        id: 'prime' as const,
-        LogoComponent: PrimeVideo,
-        cardLogoProps: { className: 'h-7 w-20' },
-        buttonLogoProps: { height: 24, width: 64 },
-        text: 'We needed a solution that could handle our complex UI requirements while maintaining performance. Tailark delivered exactly that - their component system integrated seamlessly with our existing architecture and helped us launch new features in record time.',
-        avatar: GLODIE_AVATAR,
-        name: 'Glodie Lukose',
-        title: 'Frontend Engineer',
-        brandColor: '#00A8E1',
-        resultText: 'Content discovery increased by 35% using our engine',
-        resultText2: '20% more time spent on the platform per user',
+        id: 'taronga-zoo' as const,
+        logo: '/taronga-zoo-logo.png',
+        logoClass: 'h-8 w-auto',
+        buttonLogoClass: 'h-5 w-auto',
+        text: 'The cashless wristband system from Ludo gave our visitors a seamless experience across attractions, food outlets, and gift shops. Setup was fast and the team support was outstanding.',
+        name: 'Taronga Zoo',
+        title: 'Visitor Experience',
+        brandColor: '#007A33',
+        resultText: 'Cashless payments across all zoo touchpoints',
+        resultText2: '30% faster transaction times at peak periods',
     },
 ]
 
@@ -172,7 +153,7 @@ export function Testimonials() {
                     {(() => {
                         const currentTestimonialData = testimonialsData[currentIndex]
                         if (!currentTestimonialData) return null
-                        const { LogoComponent, cardLogoProps, text, avatar, name, title, id } = currentTestimonialData
+                        const { logo, logoClass, text, name, title, id } = currentTestimonialData
                         return (
                             <motion.div
                                 key={id}
@@ -190,20 +171,12 @@ export function Testimonials() {
                                     onTouchEnd={handleTouchEnd}
                                     onTouchCancel={handleTouchEnd}>
                                     <div>
-                                        <LogoComponent {...cardLogoProps} />
+                                        <img src={logo} alt={name} className={logoClass} />
                                     </div>
                                     <p className='text-lg before:mr-1 before:font-serif before:content-["\201C"] after:ml-1 after:font-serif after:content-["\201D"]'>{text}</p>
-                                    <div className="grid grid-cols-[auto_1fr] items-center gap-3 pl-px">
-                                        <div className="ring-foreground/10 aspect-square size-12 overflow-hidden rounded-xl border border-transparent shadow-md shadow-black/15 ring-1">
-                                            <img
-                                                src={avatar}
-                                                alt={`Avatar of ${name}`}
-                                            />
-                                        </div>
-                                        <div className="space-y-0.5 text-base *:block">
-                                            <span className="text-foreground font-medium">{name}</span>
-                                            <span className="text-muted-foreground text-sm">{title}</span>
-                                        </div>
+                                    <div className="space-y-0.5 text-base *:block pl-px">
+                                        <span className="text-foreground font-medium">{name}</span>
+                                        <span className="text-muted-foreground text-sm">{title}</span>
                                     </div>
                                 </Card>
                             </motion.div>

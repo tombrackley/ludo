@@ -32,7 +32,7 @@ export default function FooterSection() {
                 <img
                     src="/footer-carnival-crowd.png"
                     alt=""
-                    className="h-full w-full object-cover object-bottom"
+                    className="h-full w-full object-cover object-bottom opacity-70"
                 />
             </div>
 
@@ -46,8 +46,8 @@ export default function FooterSection() {
                     Join the venues and events already running on Ludo. Book a demo to see how it all comes together.
                 </p>
                 <div className="mt-8 flex justify-center gap-3">
-                    <Button variant="outline" className="w-40">Book a Demo</Button>
-                    <Button className="w-40">Contact Us</Button>
+                    <Button variant="outline" className="w-40"><a href="/contact">Book a Demo</a></Button>
+                    <Button className="w-40"><a href="/contact">Contact Us</a></Button>
                 </div>
             </div>
 
