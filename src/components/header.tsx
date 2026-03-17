@@ -2,7 +2,7 @@
 import React from 'react'
 import { Link as RouterLink } from 'react-router-dom'
 const Link = React.forwardRef<HTMLAnchorElement, React.AnchorHTMLAttributes<HTMLAnchorElement> & { href?: string }>(({ href, ...props }, ref) => {
-    if (href && !href.startsWith('#')) {
+    if (href && !href.startsWith('#') && !href.includes('/#')) {
         return <RouterLink ref={ref} to={href} {...props} />
     }
     return <a ref={ref} href={href} {...props} />
