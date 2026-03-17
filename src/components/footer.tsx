@@ -14,10 +14,10 @@ const links = [
     {
         group: 'Solutions',
         items: [
-            { title: 'Royal Shows & Expos', href: '#' },
-            { title: 'Conferences', href: '#' },
-            { title: 'Waterparks', href: '#' },
-            { title: 'Arcades & FECs', href: '#' },
+            { title: 'Royal Shows & Expos', href: '/solutions' },
+            { title: 'Conferences', href: '/solutions' },
+            { title: 'Waterparks', href: '/solutions' },
+            { title: 'Arcades & FECs', href: '/solutions' },
         ],
     },
 ]

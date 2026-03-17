@@ -49,10 +49,10 @@ const features: FeatureLink[] = [
         icon: <Users className="stroke-foreground fill-emerald-500/15" />,
     },
     {
-        href: '/#ticketing',
-        name: 'Ticketing & Access',
+        href: '/#visitor-app',
+        name: 'Visitor App',
         description: 'Integrated entry and ride tokens',
-        icon: <Ticket className="stroke-foreground fill-pink-500/15" />,
+        icon: <Smartphone className="stroke-foreground fill-pink-500/15" />,
     },
 ]
 
@@ -94,7 +94,7 @@ const mobileLinks: MobileLink[] = [
         links: features,
     },
     { name: 'Solutions', href: '/solutions' },
-    { name: 'Pricing', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '/contact' },
 ]
 
@@ -247,7 +247,7 @@ const NavMenu = () => {
                     <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}><RouterLink to="/solutions">Solutions</RouterLink></NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}><a href="/contact">Pricing</a></NavigationMenuLink>
+                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}><RouterLink to="/pricing">Pricing</RouterLink></NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}><RouterLink to="/contact">Contact</RouterLink></NavigationMenuLink>

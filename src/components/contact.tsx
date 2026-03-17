@@ -16,14 +16,14 @@ export default function Contact() {
                         <div className="flex flex-col rounded-xl border bg-white p-6">
                             <h2 className="font-medium">Book a Demo</h2>
                             <p className="text-muted-foreground mb-4 mt-2 text-balance">See how Ludo Leisure Suite can streamline payments and operations at your venue or event.</p>
-                            <Button variant="outline" size="sm" className="mt-auto w-fit">Schedule a call</Button>
+                            <Button variant="outline" size="sm" className="mt-auto w-fit" asChild><a href="mailto:hello@ludo.computer">Schedule a call</a></Button>
                         </div>
                         <div className="flex flex-col rounded-xl border bg-white p-6">
                             <h2 className="text-lg font-medium">Support</h2>
                             <p className="text-muted-foreground mb-4 mt-2 text-balance">Already using Ludo Leisure Suite? Our team is here to help with setup, troubleshooting, and optimisation.</p>
 
                             <div className="mt-auto flex flex-wrap gap-1">
-                                <Button variant="outline" size="sm" className="w-fit">Contact Support</Button>
+                                <Button variant="outline" size="sm" className="w-fit" asChild><a href="mailto:hello@ludo.computer">Contact Support</a></Button>
                                 <Button variant="ghost" size="sm" className="text-primary w-fit">hello@ludo.computer</Button>
                             </div>
                         </div>

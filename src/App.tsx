@@ -7,6 +7,7 @@ import { PlatformFeatures } from '@/app/(marketing)/(home)/sections/platform-fea
 import FeaturesSection5 from '@/components/features-5'
 import FeaturesSection6 from '@/components/features-6'
 import { TestimonialsSection } from '@/app/(marketing)/(home)/sections/testimonials-section'
+import FeaturesSliderSection from '@/components/features-carousel'
 import FAQs from '@/components/faqs-2'
 import FooterSection from '@/components/footer'
 import { Button } from '@/components/ui/button'
@@ -41,6 +42,7 @@ function App() {
         <PlatformFeatures />
         <FeaturesSection5 />
         <FeaturesSection6 />
+        <FeaturesSliderSection />
         <TestimonialsSection />
         <FAQs />
       </main>
