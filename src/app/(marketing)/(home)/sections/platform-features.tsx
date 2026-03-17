@@ -3,7 +3,7 @@ import FeaturesSection4 from '@/components/features-4'
 
 export function PlatformFeatures() {
     return (
-        <section className="bg-background py-24">
+        <section id="platform" className="scroll-mt-24 bg-background py-24">
             <div className="mx-auto w-full max-w-[1200px] px-6">
                 {/* Centered title block */}
                 <div className="mx-auto mb-16 max-w-2xl text-center">

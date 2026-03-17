@@ -31,25 +31,25 @@ interface MobileLink {
 
 const features: FeatureLink[] = [
     {
-        href: '#payments',
+        href: '/#platform',
         name: 'Cashless Payments',
         description: 'NFC wristbands, cards & mobile pay',
         icon: <CreditCard className="stroke-foreground fill-indigo-500/15" />,
     },
     {
-        href: '#analytics',
+        href: '/#analytics',
         name: 'Real-Time Analytics',
         description: 'Revenue insights across every vendor',
         icon: <BarChart3 className="stroke-foreground fill-blue-500/15" />,
     },
     {
-        href: '#settlement',
+        href: '/#settlement',
         name: 'Vendor Settlement',
         description: 'Automated reconciliation & payouts',
         icon: <Users className="stroke-foreground fill-emerald-500/15" />,
     },
     {
-        href: '#ticketing',
+        href: '/#ticketing',
         name: 'Ticketing & Access',
         description: 'Integrated entry and ride tokens',
         icon: <Ticket className="stroke-foreground fill-pink-500/15" />,
@@ -93,10 +93,7 @@ const mobileLinks: MobileLink[] = [
         groupName: 'Platform',
         links: features,
     },
-    {
-        groupName: 'Solutions',
-        links: [...useCases, ...contentLinks],
-    },
+    { name: 'Solutions', href: '/solutions' },
     { name: 'Pricing', href: '/contact' },
     { name: 'Contact', href: '/contact' },
 ]
@@ -247,31 +244,7 @@ const NavMenu = () => {
                     </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
-                    <NavigationMenuContent className="min-w-lg grid grid-cols-[auto_1fr] gap-1.5 p-0">
-                        <div className="bg-card ring-border rounded-xl p-0.5 pt-2 shadow ring-1">
-                            <span className="text-muted-foreground ml-3 text-xs font-medium uppercase">Solutions</span>
-                            <ul className="mt-1">
-                                {useCases.map((useCase, index) => (
-                                    <ListItem
-                                        key={index}
-                                        href={useCase.href}
-                                        title={useCase.name}
-                                        description={useCase.description}>
-                                        {useCase.icon}
-                                    </ListItem>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="p-0.5 pt-2">
-                            <span className="text-muted-foreground ml-3 text-xs font-medium uppercase">Explore</span>
-                            <ul className="mt-1">
-                                {contentLinks.map((content, index) => (
-                                    <NavigationMenuLink key={index} asChild><a href={content.href} className="!grid grid-cols-[auto_1fr] items-center gap-2.5 px-3">{content.icon}<div className="text-foreground text-sm font-medium">{content.name}</div></a></NavigationMenuLink>
-                                ))}
-                            </ul>
-                        </div>
-                    </NavigationMenuContent>
+                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}><RouterLink to="/solutions">Solutions</RouterLink></NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}><a href="/contact">Pricing</a></NavigationMenuLink>

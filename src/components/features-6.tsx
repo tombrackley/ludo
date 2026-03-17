@@ -2,7 +2,7 @@ import { Flow13Illustration } from "@/components/illustrations/flow-13"
 
 export default function FeaturesSection() {
     return (
-        <section className="bg-background @container py-24">
+        <section id="settlement" className="scroll-mt-24 bg-background @container py-24">
             <div className="mx-auto w-full max-w-[1200px] px-6">
                 <div className="@3xl:grid-cols-2 relative grid items-center gap-12 rounded-2xl border bg-white p-12 shadow-sm">
                     <div className="flex flex-col justify-center">

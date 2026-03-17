@@ -39,15 +39,13 @@ export default function FooterSection() {
             {/* CTA Section */}
             <div className="relative z-20 mx-auto max-w-[1200px] px-6 pt-28 pb-24 text-center">
                 <h2 className="text-balance text-4xl font-semibold md:text-5xl">
-                    Venue experiences that{' '}
-                    <span className="italic">just work</span>
+                    Deliver a better visitor experience
                 </h2>
                 <p className="text-muted-foreground mx-auto mt-4 max-w-xl text-balance">
-                    Join the venues and events already running on Ludo. Book a demo to see how it all comes together.
+                    Our aim is to increase efficiency and drive revenue growth. When you make life easier for the visitor, the organiser, and the exhibitor at the same time — everyone wins.
                 </p>
                 <div className="mt-8 flex justify-center gap-3">
-                    <Button variant="outline" className="w-40"><a href="/contact">Book a Demo</a></Button>
-                    <Button className="w-40"><a href="/contact">Contact Us</a></Button>
+                    <Button className="w-40"><a href="/contact">Book a Demo</a></Button>
                 </div>
             </div>
 

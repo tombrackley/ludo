@@ -13,13 +13,13 @@ export default function SolutionsHero() {
                                 One Platform, <span className="text-primary">Every Venue Type</span>
                             </h1>
                             <p className="text-muted-foreground mb-6 mt-4 text-balance text-lg">Ludo powers cashless payments, real-time settlement, and live operations for venues and events of every scale — from 500-person conferences to 120,000-visitor show days.</p>
-                            <Button size="sm"><Link to="/contact">Book a Walkthrough</Link></Button>
+                            <Button size="sm"><Link to="/contact">Get in Touch</Link></Button>
                         </div>
                         <div className="col-span-3 flex items-end sm:col-span-2 sm:col-start-6">
                             <div className="aspect-4/5 before:border-foreground/5 before:bg-primary/10 relative overflow-hidden rounded-xl shadow-xl before:absolute before:inset-0 before:rounded-xl before:border">
                                 <img
-                                    src="/self-service-events.png"
-                                    alt="Self-service kiosk at event"
+                                    src="/top-right.jpg"
+                                    alt="Concert crowd with stage lights"
                                     className="size-full object-cover"
                                 />
                             </div>
@@ -27,16 +27,16 @@ export default function SolutionsHero() {
                         <div className="col-span-3 max-md:flex max-md:items-end sm:col-start-3">
                             <div className="before:border-foreground/5 before:bg-primary/5 relative mt-auto aspect-square h-fit overflow-hidden rounded-xl shadow-xl before:absolute before:inset-0 before:rounded-xl before:border">
                                 <img
-                                    src="/pos-vendor-settlement.png"
-                                    alt="POS vendor settlement terminal"
+                                    src="/left.jpg"
+                                    alt="Carnival fairground with ferris wheel"
                                     className="size-full object-cover"
                                 />
                             </div>
                         </div>
                         <div className="before:border-foreground/5 before:bg-primary/5 relative col-span-4 aspect-video overflow-hidden rounded-xl shadow-xl before:absolute before:inset-0 before:rounded-xl before:border max-md:col-start-3 md:col-span-3">
                             <img
-                                src="/ludo-transparent-reporting.png"
-                                alt="Ludo real-time reporting dashboard"
+                                src="/right.jpg"
+                                alt="Kids playing at waterpark"
                                 className="size-full object-cover"
                             />
                         </div>

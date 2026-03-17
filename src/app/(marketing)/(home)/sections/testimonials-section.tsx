@@ -42,7 +42,7 @@ export function TestimonialsSection() {
                         <Card className="bg-linear-to-b to-card row-span-4 grid grid-rows-subgrid gap-8 from-cyan-500/10 !overflow-visible !p-8">
                             <img src="/taronga-zoo-logo.png" alt="Taronga Zoo" className="h-7 w-auto" />
                             <p className="text-muted-foreground self-end text-balance text-xl font-medium">
-                                Deployed NFC wristbands and cashless cards for event ticketing and entry, processing <strong className="text-foreground">50,000+ contactless check-ins</strong> across peak season events with <strong className="text-foreground">sub-second tap-to-enter speeds</strong> and <strong className="text-foreground">zero queuing bottlenecks</strong> at gates.
+                                Implemented <strong className="text-foreground">NFC wristbands and cashless cards</strong> for ticketing and entry at Taronga Zoo, enabling <strong className="text-foreground">rapid tap-to-enter access</strong> and <strong className="text-foreground">seamless cashless spending</strong> across the venue.
                             </p>
                             <div className="row-span-2 grid grid-rows-subgrid gap-8 border-t pt-8">
                                 <p className='text-foreground text-balance text-lg before:mr-1 before:content-["\201C"] after:ml-1 after:content-["\201D"]'>The cashless wristband rollout was seamless. Guest throughput increased measurably, and the data we get back is invaluable for planning future events.</p>
