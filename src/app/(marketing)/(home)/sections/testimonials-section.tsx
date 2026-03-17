@@ -1,7 +1,5 @@
 import { Card } from '@/components/ui/card'
 
-const BERNARD_AVATAR = 'https://avatars.githubusercontent.com/u/31113941?v=4'
-const GLODIE_AVATAR = 'https://avatars.githubusercontent.com/u/99137927?v=4'
 
 export function TestimonialsSection() {
     return (

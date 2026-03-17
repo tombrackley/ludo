@@ -1,8 +1,4 @@
 import { Card } from '@/components/ui/card'
-import { EmailIllustration } from "@/components/ui/illustrations/email-illustration"
-import { Notes3Illustration } from "@/components/ui/illustrations/notes-3-illustration"
-import { AiAutocompleteIllustration } from "@/components/ui/illustrations/ai-autocomplete-illustration"
-import { TranslationInterfaceIllustration } from "@/components/ui/illustrations/translation-interface-illustration"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 
 export default function FeaturesSliderSection() {

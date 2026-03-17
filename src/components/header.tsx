@@ -10,7 +10,7 @@ const Link = React.forwardRef<HTMLAnchorElement, React.AnchorHTMLAttributes<HTML
 import { LogoIcon } from '@/components/logo'
 import { Button } from '@/components/ui/button'
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from '@/components/ui/navigation-menu'
-import { Menu, X, CreditCard, BarChart3, Users, Ticket, FerrisWheel, Monitor, Waves, Gamepad2, Globe, Smartphone } from 'lucide-react'
+import { Menu, X, CreditCard, BarChart3, Users, Smartphone } from 'lucide-react'
 import { useMedia } from '@/hooks/use-media'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { cn } from '@/lib/utils'
@@ -56,37 +56,6 @@ const features: FeatureLink[] = [
     },
 ]
 
-const useCases: FeatureLink[] = [
-    {
-        href: '/solutions/royal-shows',
-        name: 'Royal Shows & Expos',
-        description: 'Large-scale event cashless systems',
-        icon: <FerrisWheel className="stroke-foreground fill-emerald-500/15" />,
-    },
-    {
-        href: '/solutions/conferences',
-        name: 'Conferences',
-        description: 'Streamlined attendee experiences',
-        icon: <Monitor className="stroke-foreground fill-indigo-500/15" />,
-    },
-    {
-        href: '/solutions/water-parks',
-        name: 'Water Parks',
-        description: 'Waterproof cashless wearables',
-        icon: <Waves className="stroke-foreground fill-blue-500/15" />,
-    },
-    {
-        href: '#arcades',
-        name: 'Arcades & FECs',
-        description: 'Game credits & loyalty programs',
-        icon: <Gamepad2 className="stroke-foreground fill-pink-500/15" />,
-    },
-]
-
-const contentLinks: FeatureLink[] = [
-    { name: 'All Solutions', href: '/solutions', icon: <Globe className="stroke-foreground fill-emerald-500/15" /> },
-    { name: 'Talk to Sales', href: '/contact', icon: <Smartphone className="stroke-foreground fill-indigo-500/15" /> },
-]
 
 const mobileLinks: MobileLink[] = [
     {

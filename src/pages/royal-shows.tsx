@@ -1,6 +1,5 @@
 import Header from '@/components/header'
 import FooterSection from '@/components/footer'
-import FAQs from '@/components/faqs-2'
 import { usePageMeta } from '@/hooks/use-page-meta'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
@@ -15,9 +14,6 @@ import {
     Clock,
     ShieldCheck,
     TrendingUp,
-    Wifi,
-    Users,
-    CreditCard,
 } from 'lucide-react'
 
 const metrics = [
