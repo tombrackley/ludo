@@ -47,18 +47,18 @@ export const HeroIllustration = () => {
     return (
         <div className="relative mx-auto max-w-[1440px] px-6 pb-16">
             {/* Integration icons row */}
-            <div className="flex items-center justify-center gap-3">
+            <div className="flex items-center justify-center gap-2 sm:gap-3">
                 {integrations.map((integration) => (
                     <div
                         key={integration.name}
-                        className="bg-background flex size-16 items-center justify-center rounded-xl border shadow-sm">
+                        className="bg-background flex size-12 shrink-0 items-center justify-center rounded-xl border shadow-sm sm:size-16">
                         {integration.icon}
                     </div>
                 ))}
             </div>
 
             {/* Connector lines — right-angle paths converging to center point */}
-            <div className="relative mx-auto flex h-20 w-[444px] justify-center">
+            <div className="relative mx-auto flex h-20 w-full max-w-[444px] justify-center">
                 <svg
                     className="size-full"
                     viewBox="0 0 444 80"

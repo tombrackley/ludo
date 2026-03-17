@@ -3,10 +3,7 @@ const logos = [
     { src: '/ktoberfest.avif', alt: 'Oktoberfest' },
     { src: '/disneyland.avif', alt: 'Disneyland' },
     { src: '/aronga.avif', alt: 'Taronga' },
-    { src: '/efetling.avif', alt: 'Efteling' },
-    { src: '/avanade.avif', alt: 'Avanade' },
-    { src: '/tomorrowland-logo.avif', alt: 'Tomorrowland' },
-    { src: '/fifa-logo.avif', alt: 'FIFA' },
+    { src: '/Ekka-logo.png', alt: 'Ekka Royal Queensland Show' },
 ]
 
 export default function LogoCloudTwo() {
@@ -15,7 +12,7 @@ export default function LogoCloudTwo() {
             <div className="relative m-auto max-w-[1200px] px-6 text-center">
                 <h2 className="text-center text-xl font-normal">Powering some of the biggest events across Australia and the world</h2>
 
-                <div className="mx-auto my-12 grid max-w-3xl grid-cols-3 items-center gap-x-6 gap-y-8 sm:grid-cols-4 sm:gap-y-12">
+                <div className="mx-auto my-12 grid max-w-3xl grid-cols-5 items-center gap-x-6 gap-y-8">
                     {logos.map((logo) => (
                         <div key={logo.alt} className="flex justify-center">
                             <img
