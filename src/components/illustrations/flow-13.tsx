@@ -113,7 +113,7 @@ export const Flow13Illustration = () => {
     return (
         <div
             aria-hidden
-            className="group relative flex min-h-[380px] min-w-[420px] items-center justify-center">
+            className="group relative flex min-h-[380px] w-full items-center justify-center">
             <div ref={containerRef} className="relative z-10 flex flex-col items-center">
 
                 {paths && (

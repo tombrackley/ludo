@@ -14,7 +14,7 @@ export default function FeaturesSection() {
                         </div>
 
                     </div>
-                    <div className="h-fit min-w-0 overflow-x-auto">
+                    <div className="h-fit min-w-0 overflow-hidden">
                         <Flow13Illustration />
                     </div>
                 </div>
