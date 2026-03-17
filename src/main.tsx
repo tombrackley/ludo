@@ -10,6 +10,7 @@ import WaterParksPage from './pages/water-parks.tsx'
 import SolutionsPage from './pages/solutions.tsx'
 import PlatformPage from './pages/platform.tsx'
 import PricingPage from './pages/pricing-page.tsx'
+import NotFoundPage from './pages/not-found.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/solutions" element={<SolutionsPage />} />
         <Route path="/platform" element={<PlatformPage />} />
         <Route path="/pricing" element={<PricingPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
